@@ -1,33 +1,29 @@
 # Курсовая работа: прогноз эффективности химических соединений
 
-Данные: 1001 соединение, целевые показатели `IC50, mM`, `CC50, mM`, `SI` и числовые дескрипторы молекул.
+Репозиторий оформлен в формате Jupyter Notebook.
 
-## Структура
+## Состав
 
-- `data/drug_activity.csv` - исходный датасет.
-- `src/01_eda.py` - EDA и сохранение графиков/таблиц.
-- `src/02_regression_ic50.py` - регрессия IC50.
-- `src/03_regression_cc50.py` - регрессия CC50.
-- `src/04_regression_si.py` - регрессия SI.
-- `src/05_classification_ic50_median.py` - классификация IC50 > медианы.
-- `src/06_classification_cc50_median.py` - классификация CC50 > медианы.
-- `src/07_classification_si_median.py` - классификация SI > медианы.
-- `src/08_classification_si_gt_8.py` - классификация SI > 8.
-- `src/common.py` - общие функции.
-- `src/run_all_experiments_fast.py` - запуск всех экспериментов.
-- `results/` - метрики и таблицы.
-- `reports/` - аналитический отчет и графики.
+- `01_EDA.ipynb` — исследовательский анализ данных.
+- `02_regression_IC50.ipynb` — регрессия для IC50.
+- `03_regression_CC50.ipynb` — регрессия для CC50.
+- `04_regression_SI.ipynb` — регрессия для SI.
+- `05_classification_IC50_gt_median.ipynb` — классификация IC50 > медианы.
+- `06_classification_CC50_gt_median.ipynb` — классификация CC50 > медианы.
+- `07_classification_SI_gt_median.ipynb` — классификация SI > медианы.
+- `08_classification_SI_gt_8.ipynb` — классификация SI > 8.
+- `09_summary.ipynb` — сводная таблица лучших моделей.
+- `data/drug_activity.csv` — исходные данные.
+- `reports/coursework_report.docx` и `reports/coursework_report.pdf` — аналитический отчёт.
 
 ## Запуск
 
 ```bash
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
-PYTHONPATH=src python src/01_eda.py
-PYTHONPATH=src python src/run_all_experiments_fast.py
+python3 -m pip install --upgrade pip
+python3 -m pip install -r requirements.txt
+jupyter notebook
 ```
 
-## Важное методологическое решение
-
-Для каждой задачи из признаков удаляются все три целевые колонки: `IC50, mM`, `CC50, mM`, `SI`. Это сделано для предотвращения утечки данных, так как `SI` рассчитывается на основе `IC50` и `CC50`.
+Откройте ноутбуки и выполните ячейки сверху вниз.

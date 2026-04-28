@@ -1,0 +1,18 @@
+# PyCharm
+.idea/
+*.iml
+
+# Python
+__pycache__/
+*.pyc
+
+# Virtualenv
+.venv/
+venv/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db

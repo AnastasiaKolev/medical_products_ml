@@ -1,0 +1,8 @@
+file,best_model,main_metric,score
+classification_cc50_gt_median_metrics.csv,RandomForest,F1,0.7523809523809524
+classification_ic50_gt_median_metrics.csv,GradientBoosting,F1,0.7443946188340808
+classification_si_gt_8_metrics.csv,SVC_RBF,F1,0.569620253164557
+classification_si_gt_median_metrics.csv,SVC_RBF,F1,0.6461538461538462
+regression_cc50_metrics.csv,RandomForest,RMSE,457.364362587592
+regression_ic50_metrics.csv,RandomForest,RMSE,440.6892415215169
+regression_si_metrics.csv,RandomForest,RMSE,1355.23360890787
